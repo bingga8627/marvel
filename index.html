@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous"
+        />
+
+        <title>Hello, world!</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-601288d31950e0be"></script>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">마블 캐릭터 테스트</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">20만</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">이벤트</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">축하</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                                >드려요!</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="section">
+            <h1 class="title">마블 캐릭터 테스트</h1>
+            <h2 class="subtitle">나는 마블 케릭터 중 누구를 닮았을까?</h2>
+        </section>
+        <section class="youtube">
+            <div class="container mt-5 youtube-cover d-flex flex-row-reverse">
+                <img src="img/youtube-copy.jpg" alt="" class="youtubr-icon" /><a
+                    href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
+                    class="youtube-link"
+                    >제작도움: 조코딩 유튜브 채널</a
+                >
+            </div>
+        </section>
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <div class="mt-3 container file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <img src="img/cat.svg" class="mt-5 pt-5 upload" />
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        얼굴 사진을 올려놓거나 눌러서 업로드하세요!
+                    </h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+                <p class="result-message"></p>
+                <div id="label-container"></div>
+                <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="remove-image">
+                        다른 사진으로 해보기<span class="image-title">다른 사진으로 해보기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="webcam-container"></div>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+            (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://jongho-1.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+        >
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+
+                        $('.image-title').html(input.files[0].name);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(() => {
+                        console.log('hello');
+                        predict();
+                    });
+                    //predict();
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+            const URL = 'https://teachablemachine.withgoogle.com/models/HjfUbtwjk/';
+
+            let model, webcam, labelContainer, maxPredictions;
+
+            // Load the image model and setup the webcam
+            async function init() {
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < maxPredictions; i++) {
+                    // and class labels
+                    labelContainer.appendChild(document.createElement('div'));
+                }
+            }
+            // run the webcam image through the image model
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultMessege;
+                switch (prediction[0].className) {
+                    case "캡틴아메리카":
+                        resultMessege = "캡틴아메리카"
+                        break;
+                    case "호크아이":
+                        resultMessege = "호크아이"
+                        break;
+                    case "블랙 위도우":
+                        resultMessege = "블랙 위도우"
+                        break;
+                    case "퀵실버":
+                        resultMessege = "퀵실버"
+                        break;
+                    case "스칼렛 위치":
+                        resultMessege = "스칼렛 위치"
+                        break;
+                    case "킹핀":
+                        resultMessege = "킹핀" 
+                        break;
+                    case "프로페서 엑스":
+                        resultMessege = "프로페서 엑스" 
+                        break;
+                    case "에인션트 원":
+                        resultMessege = "에인션트 원" 
+                        break;
+                    case "스파이더맨":
+                        resultMessege = "스파이더맨" 
+                        break;
+                    case "토르":
+                        resultMessege = "토르"
+                        break;
+                    case "버키 반스":
+                        resultMessege = "버키 반스" 
+                        break;
+                    case "울버린":
+                        resultMessege = "울버린" 
+                        break;
+                    case "스타로드":
+                        resultMessege = "스타로드"
+                        break;
+                    case "퍼니셔":
+                        resultMessege = "퍼니셔" 
+                        break;
+                    case "닉 퓨리":
+                        resultMessege = "닉 퓨리" 
+                        break;
+                    case "매그니토":
+                        resultMessege = "매그니토"
+                        break;
+                    case "캡틴 마블":
+                        resultMessege = "캡틴마블"
+                        break;
+                    case "데어데블":
+                        resultMessege = "데어데블"  
+                        break;
+                    case "닥터 스트레인지":
+                        resultMessege = "닥터 스트레인지"
+                        break;
+                    case "헬라":
+                        resultMessege = "헬라"
+                        break;
+                    case "진 그레이":
+                        resultMessege = "진 그레이"
+                        break;
+                    case "휴먼 토치":
+                        resultMessege = "휴먼 토치"
+                        break;                        
+                    case "아이언맨":
+                        resultMessege = "아이언맨"
+                        break;
+                    case "실버 서퍼":
+                        resultMessege = "실버 서퍼"
+                        break;
+                    case "데드풀":
+                        resultMessege = "데드풀"
+                        break;
+                    case "드랙스 더 디스트로이어":
+                        resultMessege = "드랙스 더 디스트로이어"
+                        break;
+                    case "비욘더":
+                        resultMessege = "비욘더"
+                        break;
+                    case "네이머":
+                        resultMessege = "네이머" 
+                        break;
+                    case "로켓 라쿤":
+                        resultMessege = "로켓 라쿤" 
+                        break;
+                    case "오딘":
+                        resultMessege = "오딘" 
+                        break;
+                    case "워 머신":
+                        resultMessege = "워 머신" 
+                        break;
+                    case "그루트":
+                        resultMessege = "그루트"  
+                        break;
+                    case "헐크":
+                        resultMessege = "헐크"
+                        break;
+                    case "메피스토":
+                        resultMessege = "메피스토"
+                        break;
+                    case "가모라":
+                        resultMessege = "가모라" 
+                        break;
+                    case "울트론":
+                        resultMessege = "울트론"
+                        break;
+                    case "타노스":
+                        resultMessege = "타노스"
+                        break;
+                    case "도르마무":
+                        resultMessege = "도르마무"
+                        break;
+                    case "블랙 팬서":
+                        resultMessege = "블랙 팬서"  
+                        break;
+                    case "쉬헐크":
+                        resultMessege = "쉬헐크"
+                        break;
+                    case "문 나이트":
+                        resultMessege = "문 나이트"
+                        break;
+                    case "닥터 둠":                        
+                        resultMessege = "닥터 둠"
+                        break;
+                    case "온슬로트":
+                        resultMessege = "온슬로트"
+                        break;
+                    default:
+                        resultMessege = "알수없음"
+                }
+                $('.result-message').html(resultMessege);
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                        prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+                    labelContainer.childNodes[i] .innerHTML = classPrediction;
+                }
+            }
+        </script>
+    </body>
+    <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ -->
+</html>
